@@ -16,7 +16,9 @@ const compressedVideosDir = "compressed_videos";
 if (!fs.existsSync(compressedVideosDir)) {
   fs.mkdirSync(compressedVideosDir);
 }
-
+app.get("/", async (req, res) => {
+  res.status(200).json({ name: "shubham sinha, thailesh sinha" });
+});
 // Endpoint for uploading and compressing a video
 app.post("/compress", upload.single("video"), async (req, res) => {
   try {
