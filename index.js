@@ -39,7 +39,7 @@ app.post("/compress", upload.single("video"), async (req, res) => {
     res.status(200).json({
       message: "Compression successful",
       length: compressedVideoBuffer.length,
-      compressedVideoBuffer,
+      // compressedVideoBuffer,
     });
   } catch (err) {
     console.error("Error during compression:", err);
